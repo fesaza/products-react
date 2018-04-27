@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import ProductsMenu from './ProductsMenu';
 import ProductsList from './ProductsList';
 import ApiData from '../../api/ApiData';
+import './ProductsPage.css';
 
 class HomePage extends Component {
  constructor(props){
@@ -15,10 +16,12 @@ class HomePage extends Component {
   return (
    <div>
     <ProductsMenu categories={this.state.categories} />
-    <Switch>
-      <Route path='/products/:category' component={ProductsList}/>
-      <Route path='/products' component={ProductsList}/>
-    </Switch>
+    <div className="bodyProducts">
+     <Switch>
+       <Route path='/products/:category' component={ProductsList}/>
+       <Route path='/products' component={ProductsList}/>
+     </Switch>
+    </div>
    </div>
   );
  }

@@ -5,7 +5,7 @@ import './Header.css'
 // The Header creates links that can be used to navigate
 // between routes.
 const Header = () => (
-  <header>
+  <header className="Header">
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <div className="collapse navbar-collapse">
     <div className="navbar-nav">

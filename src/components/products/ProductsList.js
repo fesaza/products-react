@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ApiData from '../../api/ApiData';
+import ProductCard from './ProductCard';
+import './ProductList.css';
 
 class ProductsList extends Component {
 
@@ -7,21 +9,22 @@ class ProductsList extends Component {
   super(props);
   const category = this.props.match.params.category;
   this.state = {
-   products: ApiData.getByCategory(category)
+   data: ApiData.getByCategory(category)
   };
  }
 
  static getDerivedStateFromProps(nextProps, prevState) {
   const category = nextProps.match.params.category;
-  return {products: ApiData.getByCategory(category)};
+  return {data: ApiData.getByCategory(category)};
  }
 
  render() {
+  const data = this.state.data;
   return (
    <div>
-    <h1>Product lists {this.props.match.params.category}</h1>
+    <h3 className="Title-Products">Showing {data.totalCount} hidden {data.hiddenCount}</h3>
     {
-     this.state.products.map(product => <p key={product.id}>{product.name}</p>)
+     data.items.map(product => <ProductCard key={product.id} product={product} />)
     }
    </div>
   );

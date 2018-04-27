@@ -4,9 +4,10 @@ import Home from '../home/HomePage'
 import ProductsPage from '../products/ProductsPage';
 import ClientsPage from '../clients/ClientsPage';
 import ContactPage from '../contact/ContactPage';
+import './Main.css'
 
 const Main = () => (
-  <main>
+  <main className="Main">
     <Switch>
       <Route exact path='/' component={Home}/>
       <Route path='/contact' component={ContactPage}/>
