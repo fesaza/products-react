@@ -6,7 +6,7 @@ import './Header.css'
 // between routes.
 const Header = () => (
   <header className="Header">
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-sm navbar-light bg-light">
     <div className="collapse navbar-collapse">
     <div className="navbar-nav">
       <ul className="navbar-nav mr-auto">

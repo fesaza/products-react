@@ -27,7 +27,11 @@ let ApiData = {
  },
 
  getCategories(){
-  return ['Tech','Services', 'Office'];
+  return [
+   {name:'Tech', icon:'computer'},
+   {name: 'Services', icon:'settings'}, 
+   {name:'Office', icon:'folder'}
+  ];
  }
 }
 
