@@ -5,18 +5,16 @@ import { Toolbar } from 'react-md';
 
 const Nav = () => {
   return (
-    <nav className="navbar navbar-expand-sm navbar-light">
-      <div className="collapse navbar-collapse">
-        <div className="navbar-nav">
-          <ul className="navbar-nav mr-auto">
-               <li className="nav-item"><Link className="nav-link" to='/'>Home</Link></li>
-               <li className="nav-item"><Link className="nav-link" to='/products'>products</Link></li>
-               <li className="nav-item"><Link className="nav-link" to='/clients'>clients</Link></li>
-               <li className="nav-item"><Link className="nav-link" to='/contact'>contact</Link></li>
-             </ul>
-           </div>
-         </div>
-       </nav>
+    <nav>
+      <div>
+        <ul className="ul-header">
+          <li className="md-list-item"><Link className="links-header" to='/'>Home</Link></li>
+          <li><Link className="links-header" to='/products'>products</Link></li>
+          <li><Link className="links-header" to='/clients'>clients</Link></li>
+          <li><Link className="links-header" to='/contact'>contact</Link></li>
+        </ul>
+      </div>
+    </nav>
   );
 }
 

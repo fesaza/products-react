@@ -1,27 +1,19 @@
 .App {
   font-size: 15px;
   line-height: 24px;
-  color: #7c7c7d;
-  font-family: Roboto,sans-serif; }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px; }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white; }
-
-.App-title {
-  font-size: 1.5em; }
-
-.App-intro {
-  font-size: large; }
+  color: #7c7c7d; }
 
 li :hover {
   background: rgba(0, 0, 0, 0.1); }
+
+a {
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none; }
+
+a:hover {
+  color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.1);
+  text-decoration: none !important; }
 
 @keyframes App-logo-spin {
   from {

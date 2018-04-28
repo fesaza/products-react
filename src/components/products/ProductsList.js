@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ApiData from '../../api/ApiData';
 import ProductCard from './ProductCard';
-import './ProductList.css';
 
 class ProductsList extends Component {
 
@@ -21,11 +20,11 @@ class ProductsList extends Component {
  render() {
   const data = this.state.data;
   const hidden = data.hiddenCount > 0 ? (
-   <span>hidden {data.hiddenCount}</span>
+   <span>- hidden: <b>{data.hiddenCount}</b></span>
   ):(<span />);
   return (
    <div>
-    <h3 className="Title-Products">Showing {data.totalCount} {hidden}</h3>
+    <label>Showing <b>{data.totalCount}</b> products {hidden}</label>
     {
      data.items.map(product => <ProductCard key={product.id} product={product} />)
     }

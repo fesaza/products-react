@@ -1,4 +1,51 @@
 .bodyProducts{
  margin-left: 20%;
  padding-top: 14px;
+ margin-right: 1%;
 }
+
+.card {
+ margin-bottom: 32px;
+}
+
+/* Menu styles */
+.menu{
+ color: rgba(0, 0, 0, 0.87);
+ background-color: rgb(255, 255, 255);
+ transition: transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+ box-sizing: border-box;
+ font-family: Roboto, sans-serif;
+ -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+ box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 3px 10px;
+ border-radius: 0px;
+ height: 100%;
+ width: 234px;
+ position: fixed;
+ left: 0px;
+ top: 0px;
+ transform: translate(0px, 0px);
+ overflow: auto;
+ margin-top: 64px;
+}
+
+.menu-ul{
+ padding: 0px;
+}
+
+.menuLabel{
+ margin-left: 8px; 
+ padding: 10px;
+}
+
+.Title-Categories{
+ color: #7c7c7d;
+ text-align: center;
+ margin-top: 18px;
+ border-bottom: 1px solid #eee;
+}
+
+.icon{
+ vertical-align: middle;
+}
+
+

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, CardTitle, CardText, Grid, Cell } from 'react-md';
-import './ProductCard.css'
 
 const ProductCard = ({product}) => {
  var subtitle = `${product.categories.join(', ')} - ${product.brand}`;
@@ -19,8 +18,8 @@ const ProductCard = ({product}) => {
        <div>
         <div>{product.description}</div>
         <br />
-        <div><span className="labels">Price:</span> {product.price}</div>
-        <div><span className="labels">Stock:</span> {product.stock}</div>
+        <div><b>Price:</b> {product.price}</div>
+        <div><b>Stock:</b> {product.stock}</div>
        </div>
       </Cell>
      </Grid>
