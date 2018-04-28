@@ -1,22 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Card, CardTitle, CardText, Grid, Cell } from 'react-md';
 import './ProductCard.css'
 
 const ProductCard = ({product}) => {
+ var subtitle = `${product.categories.join(', ')} - ${product.brand}`;
  return (
-  <div className="card">
-   <h4>{product.name}</h4>
-   <div>{product.categories.join(', ')} - {product.brand}</div>
-   <div className="row">
-    <img className="col-md-2" src={product.photo} alt={product.name} height="100%" />
-    <div className="col-md-9">
-     <div>{product.description}</div>
-     <br />
-     <div><span className="labels">Price:</span> {product.price}</div>
-     <div><span className="labels">Stock:</span> {product.stock}</div>
-    </div>
-   </div>
-  </div>
+  <Card  className="md-block-centered card">
+   <CardTitle title={product.name} subtitle={subtitle} />
+   <CardText>
+    <Grid>
+     <Cell size={2}>
+     <div>
+      <img src={product.photo} alt={product.name} width="100%" height="100%" />
+      </div>
+     </Cell>
+      <Cell size={9}>
+       <div>
+        <div>{product.description}</div>
+        <br />
+        <div><span className="labels">Price:</span> {product.price}</div>
+        <div><span className="labels">Stock:</span> {product.stock}</div>
+       </div>
+      </Cell>
+     </Grid>
+   </CardText>
+  </Card>
  );
 }
 
