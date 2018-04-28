@@ -6,16 +6,16 @@ import './Header.css'
 // between routes.
 const Header = () => (
   <header className="Header">
-    <nav className="navbar navbar-expand-sm navbar-light bg-light">
-    <div className="collapse navbar-collapse">
-    <div className="navbar-nav">
-      <ul className="navbar-nav mr-auto">
-        <li className="nav-item"><Link className="nav-link" to='/'>Home</Link></li>
-        <li className="nav-item"><Link className="nav-link" to='/products'>products</Link></li>
-        <li className="nav-item"><Link className="nav-link" to='/clients'>clients</Link></li>
-        <li className="nav-item"><Link className="nav-link" to='/contact'>contact</Link></li>
-      </ul>
-      </div>
+    <nav className="navbar navbar-expand-sm navbar-light">
+      <div className="collapse navbar-collapse">
+        <div className="navbar-nav">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item"><Link className="nav-link" to='/'>Home</Link></li>
+            <li className="nav-item"><Link className="nav-link" to='/products'>products</Link></li>
+            <li className="nav-item"><Link className="nav-link" to='/clients'>clients</Link></li>
+            <li className="nav-item"><Link className="nav-link" to='/contact'>contact</Link></li>
+          </ul>
+        </div>
       </div>
     </nav>
   </header>

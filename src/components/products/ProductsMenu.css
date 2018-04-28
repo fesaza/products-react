@@ -8,13 +8,17 @@
  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 3px 10px;
  border-radius: 0px;
  height: 100%;
- width: 19%;
+ width: 234px;
  position: fixed;
  left: 0px;
  top: 0px;
  transform: translate(0px, 0px);
  overflow: auto;
  margin-top: 57px;
+}
+
+.menu-ul{
+ padding: 0px;
 }
 
 .menuItem{
@@ -37,7 +41,7 @@
 }
 
 .menuLabel{
- margin-left: 0px; 
+ margin-left: 8px; 
  padding: 10px; 
  position: relative;
  color: #7c7c7d;
@@ -46,6 +50,7 @@
 
 a:hover {
  color: #0056b3;
+ background: rgba(0, 0, 0, 0.1);
  text-decoration: none !important;
 }
 

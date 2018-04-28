@@ -20,9 +20,12 @@ class ProductsList extends Component {
 
  render() {
   const data = this.state.data;
+  const hidden = data.hiddenCount > 0 ? (
+   <span>hidden {data.hiddenCount}</span>
+  ):(<span />);
   return (
    <div>
-    <h3 className="Title-Products">Showing {data.totalCount} hidden {data.hiddenCount}</h3>
+    <h3 className="Title-Products">Showing {data.totalCount} {hidden}</h3>
     {
      data.items.map(product => <ProductCard key={product.id} product={product} />)
     }
