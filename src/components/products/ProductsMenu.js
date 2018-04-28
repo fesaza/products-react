@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom'
 
 class ProductsMenu extends Component {
+ static propTypes = {
+    categories: PropTypes.array.isRequired
+ }
  renderCard(category){
   return (
    <li className="md-list-item" key={category.name}>
