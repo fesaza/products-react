@@ -1,0 +1,4 @@
+export const TypesActions = {
+ CREATE_CLIENT: 'CREATE_CLIENT',
+ FILTER_CLIENT: 'FILTER_CLIENT'
+} 

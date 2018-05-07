@@ -1,13 +1,18 @@
-import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import {addClient, filterClient} from './../../actions/ClientsActions';
+import Clients from './Clients';
 
-class HomePage extends Component {
- render() {
-  return (
-   <div>
-    <h1>Clients page</h1>
-   </div>
-  );
- }
-}
+const getClients = (clients, filter) => (
+ filter ? clients.filter(item => (item.name.includes(filter))) : clients
+);
 
-export default HomePage;
+const mapStateToProps = state => ({
+ clients: getClients(state.clients, state.filter)
+});
+
+const mapDispatchToProps = dispatch => ({
+ save: name => dispatch(addClient(name)),
+ filterClient: filter => dispatch(filterClient(filter))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Clients);
