@@ -7,12 +7,12 @@ const getClients = (clients, filter) => (
 );
 
 const mapStateToProps = state => ({
- clients: getClients(state.clients, state.filter)
+ clients: getClients(state.clients.clients, state.clients.filter)
 });
 
 const mapDispatchToProps = dispatch => ({
  save: name => dispatch(addClient(name)),
- filterClient: filter => dispatch(filterClient(filter))
+ filter: filter => dispatch(filterClient(filter))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Clients);

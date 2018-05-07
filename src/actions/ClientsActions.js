@@ -5,5 +5,6 @@ export const addClient = client => {
 }
 
 export const filterClient = filter => {
+ debugger;
  return {type: TypesActions.FILTER_CLIENT, filter}
 }

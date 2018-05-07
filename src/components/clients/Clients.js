@@ -26,7 +26,11 @@ return(
        save(input.value);
       }
      }>Add client</Button>
-    
+     <Button flat primary swapTheming onClick={e => {
+       e.preventDefault(); 
+       filter(input.value);
+      }
+     }>Filter</Button>
    </form>
   </div>
   <List>
@@ -41,13 +45,14 @@ return(
 }
 
 Clients.propTypes = {
-clients: propTypes.arrayOf(
-propTypes.shape({
- id: propTypes.number.isRequired,
- name: propTypes.string.isRequired
-}).isRequired
-).isRequired,
-filter: propTypes.string
+ clients: propTypes.arrayOf(
+ propTypes.shape({
+  id: propTypes.number.isRequired,
+  name: propTypes.string.isRequired
+ }).isRequired
+ ).isRequired,
+ filter: propTypes.func,
+ save: propTypes.func
 };
 
 export default Clients;
