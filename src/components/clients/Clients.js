@@ -1,5 +1,11 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import {
+ List,
+ ListItem,
+ TextField,
+ Button
+} from 'react-md';
 
 const Clients = ({clients, filter, save}) => {
 let input;
@@ -7,25 +13,29 @@ return(
  <div>
   <h1>Clients page</h1>
   <div>
-   <form >
-    <input type="text" ref={node => input = node} />
-    <input type="submit" value="Save" onClick={e => {
-     e.preventDefault(); 
-     save(input.value);
-     input.value = '';
-    }
-     } />
+   <form onSubmit={e=>e.preventDefault()} >
+    <TextField 
+    id="name"
+    label="Client name"
+    lineDirection="center"
+    placeholder="type the name"
+    className="md-cell md-cell--bottom"
+    ref={node => input = node} />
+    <Button flat primary swapTheming onClick={e => {
+       e.preventDefault(); 
+       save(input.value);
+      }
+     }>Add client</Button>
+    
    </form>
   </div>
-  <ul>
-   {
+  <List>
+  {
     clients.map(client => (
-     <li key={client.id}>
-      {client.name}
-     </li>
+     <ListItem key={client.id} primaryText={client.name} />
     ))
    }
-  </ul>
+  </List>
  </div>
 );
 }
